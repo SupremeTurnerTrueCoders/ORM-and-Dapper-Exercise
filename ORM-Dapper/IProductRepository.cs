@@ -12,7 +12,7 @@ namespace ORM_Dapper
 
         void CreateProduct(string name, double price, int categoryID);
 
-        public void UpdateProduct(Products products);
+        public void UpdateProduct(Product products);
         public void DeleteProduct(int id);
     }
 }

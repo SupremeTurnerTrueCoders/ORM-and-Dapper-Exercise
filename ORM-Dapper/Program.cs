@@ -21,21 +21,21 @@ namespace ORM_Dapper
 
             repo.CreateProduct("newStuff", 20, 1);
 
-            var productToUpdate = repo.GetProduct(974); 
+            var productToUpdate = repo.GetProduct(73); 
 
            var products = repo.GetAllProducts();
 
-            productToUpdate.Name = "UPDATED!!";
+            productToUpdate.Name = "Nickelback: Silver Side Up";
             productToUpdate.Price = 12.99;
-            productToUpdate.CategoryID = 1;
-            productToUpdate.OnSale = false;
-            productToUpdate.StockLevel = 1000;
+            productToUpdate.CategoryID = 7;
+            productToUpdate.OnSale = 0;
+            productToUpdate.StockLevel = "1070";
 
-            productRepository.UpdateProduct(productToUpdate);
+            repo.UpdateProduct(productToUpdate);
 
-            productRepository.Deleteproduct(974);
+            repo.DeleteProduct(944);
 
-            var products = productRepository.GetAllProducts();
+           
 
 
             foreach ( var prod in products )
